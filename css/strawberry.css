@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  transition: 0.4s transform ease-in;
+
+  /* === change background color here === */
+  --background-color: #ffffff;
+  /* === change width of the graphic here === */
+  --width: clamp(300px, 40vw, 500px);
+}
+
+body {
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--width);
+  height: auto;
+}
+
+/* === 🍓motion graphics for the strawberry on the back === */
+
+#strawberry {
+  transition: var(--transition);
+  animation: strawberry1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 70% 40%;
+}
+
+@keyframes strawberry1 {
+  from {
+    transform: translate(0, 0);
+    transform: rotate(0);
+  }
+  to {
+    transform: translate(-10px, -10px);
+    transform: rotate(-4deg);
+  }
+}
+
+/* === 🍓motion graphics for the front strawberry === */
+
+#strawberry-2 {
+  transition: var(--transition);
+  animation-name: strawberry2;
+  animation-timing-function: ease-in-out;
+  animation-delay: .4s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes strawberry2 {
+  from {
+    transform: translate(0, 0);
+    transform: rotate(0);
+  }
+  to {
+    transform: translate(8px, -12px);
+  }
+}

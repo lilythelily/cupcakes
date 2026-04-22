@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  transition: 0.4s transform ease-in;
+
+  /* === change background color here === */
+  --background-color: #fff;
+  /* === change width of the graphic here === */
+  --width: clamp(300px, 40vw, 500px);
+}
+
+body {
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--width);
+  height: auto;
+}
+
+/* === 🍋 motion graphics for the sliced lemon on the back === */
+
+#lemon-2 {
+  transition: var(--transition);
+  animation: lemon;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 60% 62%;
+}
+
+@keyframes lemon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-12deg);
+  }
+}
+
