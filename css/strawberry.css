@@ -60,10 +60,11 @@ main {
   transition: var(--transition);
   animation-name: strawberry2;
   animation-timing-function: ease-in-out;
-  animation-delay: .4s;
+  animation-delay: 0.4s;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  transform-origin: 50% 50%;
 }
 
 @keyframes strawberry2 {
@@ -72,6 +73,7 @@ main {
     transform: rotate(0);
   }
   to {
-    transform: translate(8px, -12px);
+    transform: translate(8px, -30px);
+    transform: rotate(-4deg);
   }
 }
