@@ -30,6 +30,10 @@ main {
   width: var(--width);
   height: auto;
 }
+svg{
+  width: var(--width);
+  height: auto;
+}
 
 /* === 🍓motion graphics for the strawberry on the back === */
 

@@ -31,6 +31,11 @@ main {
   height: auto;
 }
 
+svg{
+  width: var(--width);
+  height: auto;
+}
+
 /* === 🍋 motion graphics for the sliced lemon on the back === */
 
 #lemon-2 {
